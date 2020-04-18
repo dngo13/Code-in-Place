@@ -19,24 +19,43 @@ def main():
     paint_rectangle()
     turn_right()
 
-# Defines the turn_right function for Karel
+"""
+Makes Karel turn right
+Pre: none
+Post: Karel is facing to the right of whichever
+      direction Karel was facing previously
+"""
 def turn_right():
     for i in range(3):
         turn_left()
 
-# Defines the turn_around function for Karel
+"""
+Makes Karel turn to the direction behind
+Pre: none
+Post: Karel is facing behind whichever
+      direction Karel was facing previously
+"""
 def turn_around():
     turn_left()
     turn_left()
 
-# Paints the 3 sides of a rectangle
+"""
+Karel paints 3 sides of a rectangle using the paint_side() function
+Pre: none
+Post: none
+"""
 def paint_rectangle():
     for i in range(2):
         paint_side()
         move()
     paint_side()
 
-# If Karel is adjacent to a side of the building, paint
+"""
+If Karel is adjacent to a side of the building, paint
+Pre: Left side of Karel is blocked
+Post: Karel is positioned so that when she moves another tile
+      the left will be blocked by another side 
+"""
 def paint_side():
     while left_is_blocked():
         put_beeper()

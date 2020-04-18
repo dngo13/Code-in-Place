@@ -16,7 +16,7 @@ def main():
     pass
 
 
-# There is no need to edit code beyond this point
+# There is no need to edit code beyond this point2
 
 if __name__ == "__main__":
     run_karel_program()
